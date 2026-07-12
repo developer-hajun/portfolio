@@ -499,7 +499,7 @@
       "icon": "📑",
       "title": "ForMZ",
       "tagline": "청년 정책 및 주거 정보 제공 플랫폼",
-      "cardBody": "청년 정책·주거 정보 플랫폼. Spring Batch로 공공 데이터를 자동화하고, EXPLAIN 분석으로 Full Scan을 잡아 응답을 400ms에서 80ms로 줄였습니다.",
+      "cardBody": "청년 정책·주거 정보 플랫폼. Spring Batch로 공공 데이터를 자동화하고, EXPLAIN 분석으로 Full Scan을 잡아 응답을 400ms에서 200ms로 줄였습니다.",
       "stackShort": [],
       "moreCount": 0,
       "awardCount": 0,
@@ -569,7 +569,7 @@
       "myRole": [
         "Spring Batch 기반 공공 데이터 수집·가공·적재 파이프라인 구축",
         "JWT·Redis 인증 로직 및 로그인/세션 처리 최적화",
-        "정책 조회 API 성능 최적화 (EXPLAIN→복합 인덱스→Redis Cache-Aside, 400ms→80ms)",
+        "정책 조회 API 성능 최적화 (EXPLAIN→복합 인덱스→Redis Cache-Aside, 400ms→200ms)",
         "커뮤니티(글·댓글) 백엔드 로직 및 컨트롤러 설계"
       ]
     },
