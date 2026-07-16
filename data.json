@@ -23,7 +23,7 @@
       {
         "theme": "light",
         "title": "성능 최적화 및 시스템 안정화",
-        "desc": "EXPLAIN 분석으로 Full Table Scan을 진단해 복합 인덱스·Redis Cache-Aside로 응답 시간을 400ms에서 200ms로 단축했습니다. 멀티스레드 타임스탬프 역전과 프레임 메모리 누수도 스레드 단일화·명시적 리소스 해제로 근본 해결해 메모리 80% 절감, 30 FPS 실시간성을 확보했습니다.",
+        "desc": "EXPLAIN 분석으로 Full Table Scan을 진단해 복합 인덱스·Redis Cache-Aside로 응답 시간을 400ms에서 200ms로 단축했습니다. 멀티스레드 타임스탬프 역전과 프레임 메모리 누수도 스레드 단일화·명시적 리소스 해제로 근본 해결해 메모리 41% 절감, 30 FPS 실시간성을 확보했습니다.",
         "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MDAgMjMwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSI+CjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYSIgeDE9IjAiIHkxPSIwIiB4Mj0iMSIgeTI9IjEiPjxzdG9wIG9mZnNldD0iMCIgc3RvcC1jb2xvcj0iI2ZmZjNlZSIvPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iI2ZmZTBkMyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPgo8cmVjdCB3aWR0aD0iNDAwIiBoZWlnaHQ9IjIzMCIgZmlsbD0idXJsKCNhKSIvPgo8ZyBmaWxsPSJub25lIiBzdHJva2U9IiNlODU2MmQiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiPgo8cG9seWxpbmUgcG9pbnRzPSI0MCwxNzAgOTAsMTIwIDEzMCwxNDAgMTc1LDgwIDIyMCwxMTAgMjY1LDU1IDMyMCw5MCAzNjAsNTAiIG9wYWNpdHk9Ii45Ii8+CjwvZz4KPGcgZmlsbD0iI2U4NTYyZCIgb3BhY2l0eT0iLjg1Ij48Y2lyY2xlIGN4PSI5MCIgY3k9IjEyMCIgcj0iNCIvPjxjaXJjbGUgY3g9IjE3NSIgY3k9IjgwIiByPSI0Ii8+PGNpcmNsZSBjeD0iMjY1IiBjeT0iNTUiIHI9IjQiLz48Y2lyY2xlIGN4PSIzNjAiIGN5PSI1MCIgcj0iNCIvPjwvZz4KPGcgZmlsbD0iI2Y2YTQ4OCIgb3BhY2l0eT0iLjU1Ij48cmVjdCB4PSI0NSIgeT0iMTUwIiB3aWR0aD0iMjAiIGhlaWdodD0iNDUiIHJ4PSIzIi8+PHJlY3QgeD0iOTAiIHk9IjEzMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjY1IiByeD0iMyIvPjxyZWN0IHg9IjEzNSIgeT0iMTYwIiB3aWR0aD0iMjAiIGhlaWdodD0iMzUiIHJ4PSIzIi8+PHJlY3QgeD0iMTgwIiB5PSIxMTUiIHdpZHRoPSIyMCIgaGVpZ2h0PSI4MCIgcng9IjMiLz48cmVjdCB4PSIyMjUiIHk9IjE0MCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjU1IiByeD0iMyIvPjxyZWN0IHg9IjI3MCIgeT0iMTAwIiB3aWR0aD0iMjAiIGhlaWdodD0iOTUiIHJ4PSIzIi8+PHJlY3QgeD0iMzE1IiB5PSIxMjUiIHdpZHRoPSIyMCIgaGVpZ2h0PSI3MCIgcng9IjMiLz48L2c+CjxjaXJjbGUgY3g9IjMzMCIgY3k9IjU1IiByPSIyOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZTg1NjJkIiBzdHJva2Utd2lkdGg9IjYiIHN0cm9rZS1kYXNoYXJyYXk9IjEzMCA0NCIgb3BhY2l0eT0iLjciLz4KPC9zdmc+"
       },
       {
@@ -385,7 +385,7 @@
             "매 프레임 생성되는 Bitmap·ImageProxy 미해제로 메모리 누적, 카메라 프리징·발열 발생",
             "try/finally로 Bitmap recycle·ImageProxy close를 예외 상황에서도 보장",
             "비녹화 시 조기 return, DisposableEffect로 화면 이탈 시 리소스 일괄 해제",
-            "결과: 메모리 80% 절감(400MB → 80MB)"
+            "결과: 메모리 41% 절감(400MB → 236MB)"
           ]
         },
         {
@@ -399,7 +399,7 @@
         {
           "heading": "성과",
           "bullets": [
-            "메모리 사용량 80% 절감(400MB → 80MB)",
+            "메모리 사용량 41% 절감(400MB → 236MB)",
             "분석 프레임 14~20 FPS(프리징) → 30~33 FPS(안정)",
             "Major GC 5초 간격(ANR 위기) → 60초 이상 무발생"
           ]
@@ -409,7 +409,7 @@
       "awards": [],
       "myRole": [
         "AI 추론 파이프라인 성능 최적화 (GPU 위임, 스레드 단일화, 프레임 스킵)",
-        "안드로이드 리소스 생명주기 관리로 메모리 누수·프리징 해결 (메모리 80% 절감)",
+        "안드로이드 리소스 생명주기 관리로 메모리 누수·프리징 해결 (메모리 41% 절감)",
         "OTP·인증/Refresh 토큰의 Redis TTL 캐싱 및 Lettuce 커넥션 풀 최적화 (인증 200ms→30ms)"
       ]
     },
